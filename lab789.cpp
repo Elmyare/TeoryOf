@@ -105,8 +105,8 @@ Vector rsft(Vector x, size_t p1, size_t p2) {
 
 
 int main() {
-	Vector a(100), b(100);
-    for (int i = 0; i < 100; i++) {
+	Vector a(9), b(9);
+    for (int i = 0; i < 9; i++) {
         a[i] = i;
         b[i] = i;
     }

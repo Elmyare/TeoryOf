@@ -101,6 +101,39 @@ def main():
     for val in x:
         print(val)
 
+    # print("\nTransformation:")
+    # X = dft(x, m)
+    # for val in X:
+    #     print(val)
+
+    # print("\nReverse:")
+    # X = idft(X, m)
+    # for val in X:
+    #     print(val)
+
+    # print(f"\nOperation counts for N=100, 400, 1600:")
+    # print(m[0], end="\t")
+    
+    # # For N=400
+    # m[0] = 0
+    # N = 400
+    # p1 = 20
+    # p2 = 20
+    # x2 = [Complex(i, 0) for i in range(N)]
+    # X = dft(x2, m)
+    # X = idft(X, m)
+    # print(m[0], end="\t")
+
+    # # For N=1600
+    # m[0] = 0
+    # N = 1600
+    # p1 = 40
+    # p2 = 40
+    # x3 = [Complex(i, 0) for i in range(N)]
+    # X = dft(x3, m)
+    # X = idft(X, m)
+    # print(m[0])
+
     print("\nTransformation:")
     X = sft(x, p1, p2, m)
     for val in X:

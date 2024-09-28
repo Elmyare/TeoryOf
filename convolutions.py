@@ -105,8 +105,8 @@ def convolution_sft(a, b):
     return rsft(C, p1, p2)
 
 # Тестовые данные
-a = np.array([i for i in range(10)], dtype=complex)
-b = np.array([i for i in range(10)], dtype=complex)
+a = np.array([i for i in range(9)], dtype=complex)
+b = np.array([i for i in range(9)], dtype=complex)
 
 # 1. Обычная свёртка
 conv_naive = convolution_naive(a, b)

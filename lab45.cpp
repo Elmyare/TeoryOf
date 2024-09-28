@@ -124,65 +124,65 @@ int main() {
         cout << x[i] << " ";
     }
 
-    //cout << endl << "transformation:" << endl;
-    //Vector X = dft(x, m);
-    //for (size_t i = 0; i < N; i++)
-    //    cout << x[i] << endl;
-
-    //cout << endl << "reverse:" << endl;
-    //X = idft(X, m);
-    //for (size_t i = 0; i < N; i++)
-    //    cout << x[i] << endl;
-
-    //cout << "100\t400\t1600" << endl;
-    //cout << m << "\t";
-    //m = 0;
-    //N = 400;
-    //Vector x2(N);
-    //for (size_t i = 0; i < N; i++) {
-    //    x2[i] = i;
-    //}
-    //X = dft(x2, m);
-    //X = idft(X, m);
-    //cout << m << "\t";
-    //m = 0;
-    //N = 1600;
-    //Vector x3(N);
-    //for (size_t i = 0; i < N; i++) {
-    //    x3[i] = i;
-    //}
-    //X = dft(x3, m);
-    //X = idft(X, m);
-    //cout << m << endl;
-
-    cout << endl << "Transformation:" << endl;
-    Vector X = sft(x, p1, p2, m);
+    cout << endl << "transformation:" << endl;
+    Vector X = dft(x, m);
     for (size_t i = 0; i < N; i++)
-        cout << X[i] << endl;
+       cout << x[i] << endl;
 
-    cout << endl << "Reverse:" << endl;
-    X = rsft(X, p1, p2, m);
+    cout << endl << "reverse:" << endl;
+    X = idft(X, m);
     for (size_t i = 0; i < N; i++)
-        cout << X[i] << endl;
+       cout << x[i] << endl;
 
     cout << "100\t400\t1600" << endl;
     cout << m << "\t";
-    m = 0; N = 400; p1 = 20; p2 = 20;
+    m = 0;
+    N = 400;
     Vector x2(N);
     for (size_t i = 0; i < N; i++) {
-        x2[i] = i;
+       x2[i] = i;
     }
-    X = sft(x2, p1, p2, m);
-    X = rsft(X, p1, p2, m);
+    X = dft(x2, m);
+    X = idft(X, m);
     cout << m << "\t";
-    m = 0; N = 1600; p1 = 40; p2 = 40;
+    m = 0;
+    N = 1600;
     Vector x3(N);
     for (size_t i = 0; i < N; i++) {
-        x3[i] = i;
+       x3[i] = i;
     }
-    X = sft(x3, p1, p2, m);
-    X = rsft(X, p1, p2, m);
+    X = dft(x3, m);
+    X = idft(X, m);
     cout << m << endl;
+
+    // cout << endl << "Transformation:" << endl;
+    // Vector X = sft(x, p1, p2, m);
+    // for (size_t i = 0; i < N; i++)
+    //     cout << X[i] << endl;
+
+    // cout << endl << "Reverse:" << endl;
+    // X = rsft(X, p1, p2, m);
+    // for (size_t i = 0; i < N; i++)
+    //     cout << X[i] << endl;
+
+    // cout << "100\t400\t1600" << endl;
+    // cout << m << "\t";
+    // m = 0; N = 400; p1 = 20; p2 = 20;
+    // Vector x2(N);
+    // for (size_t i = 0; i < N; i++) {
+    //     x2[i] = i;
+    // }
+    // X = sft(x2, p1, p2, m);
+    // X = rsft(X, p1, p2, m);
+    // cout << m << "\t";
+    // m = 0; N = 1600; p1 = 40; p2 = 40;
+    // Vector x3(N);
+    // for (size_t i = 0; i < N; i++) {
+    //     x3[i] = i;
+    // }
+    // X = sft(x3, p1, p2, m);
+    // X = rsft(X, p1, p2, m);
+    // cout << m << endl;
 
     return 0;
 }
