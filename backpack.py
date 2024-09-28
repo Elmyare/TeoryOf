@@ -1,6 +1,6 @@
 def print_backpack(backpack):
-    for a in backpack:
-        print("       ".join(list(map(str, a))))
+    for i, val in enumerate(backpack):
+        print(str(i)+"       "+"       ".join(list(map(str, val))))
     print()
 
 def theft(product, backpack, S):
@@ -38,6 +38,7 @@ def main():
     backpack = [[0] * 4 for _ in range(S + 1)]
 
     for i in range(S + 1):
+        print(f"Step {i}:")
         theft(product, backpack, i)
 
     for j in range(4):
